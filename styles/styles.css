@@ -87,29 +87,14 @@ h4, p, q, small, nav, button, form {
 
 /*-- CONTAINERS --*/
 
-/*-- MOBILE --*/
+/*-- SMALL SCREEN --*/
 
-/*-- LANDSCAPE --*/
-@media screen and (min-width: 480px) {
-
-}
-
-/*-- TABLET --*/
-@media screen and (min-width: 600px) {
-
-}
-
-/*-- LANDSCAPE TABLET/LAPTOP --*/
-@media screen and (min-width: 768px) {
-
-}
-
-/*-- SCREEN --*/
-@media screen and (min-width: 1024px) {
+/*-- MEDIUM SCREEN --*/
+@media screen and (min-width: 550px) {
 
 }
 
 /*-- LARGE SCREEN --*/
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
 
 }
