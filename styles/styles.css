@@ -1,5 +1,6 @@
-/* Timothy Adams */
-/* CSS Reset */
+/*-- TIMOTHY ADAMS --*/
+
+/*-- CSS RESET --*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -49,4 +50,66 @@ table {
 	border-spacing: 0;
 }
 
-/* Custom CSS begins here */
+/*-- CUSTOM CSS STARTS HERE --*/
+
+/*-- FONT IMPORT --*/
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*-- GLOBAL STYLES --*/
+
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+    --font-molle: 'Molle', cursive;
+    --font-montserrat: 'Montserrat', sans-serif;
+}
+
+/*-- FONTS --*/
+h1, h2, h3 {
+    font-family: var(--font-molle);
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: var(--font-montserrat);
+}
+
+/*-- HEADINGS --*/
+
+/*-- IMAGES --*/
+
+/*-- MAIN/HEADER/FOOTER --*/
+
+/*-- CONTAINERS --*/
+
+/*-- MOBILE --*/
+
+/*-- LANDSCAPE --*/
+@media screen and (min-width: 480px) {
+
+}
+
+/*-- TABLET --*/
+@media screen and (min-width: 600px) {
+
+}
+
+/*-- LANDSCAPE TABLET/LAPTOP --*/
+@media screen and (min-width: 768px) {
+
+}
+
+/*-- SCREEN --*/
+@media screen and (min-width: 1024px) {
+
+}
+
+/*-- LARGE SCREEN --*/
+@media screen and (min-width: 1440px) {
+
+}
