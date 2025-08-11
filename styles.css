@@ -115,6 +115,7 @@ header {
     position: relative;
     display: grid;
     width: 100%;
+    padding-top: 20px;
     grid-template-columns: auto, 1fr, auto;
     grid-template-areas:
         'logo . menu'
@@ -139,7 +140,7 @@ header h1 {
 
 header p {
     grid-area: subtitle;
-    margin: 0 30px;
+    margin: 0 30px 10px 30px;
 }
 
 nav {
@@ -164,7 +165,7 @@ nav label {
     display: none;
 }
 
-nav ul{
+#menu-toggle ul{
     display: none;
 }
 
@@ -205,11 +206,80 @@ li:hover a{
 /*-- FOOTER --*/
 
 /*-- MEDIUM SCREEN --*/
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 600px) {
+    header {
+        grid-template-areas: 
+        'logo header .'
+        'logo subtitle .'
+        'menu menu menu';
+        gap: 10px;
+        padding-bottom: 30px;
+        position: static;
+    }
 
+    header p {
+        font-size: 1.5rem;
+    }
+
+    #logo img {
+        width: 225px;
+    }
+
+    #menu-toggle label {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        margin: 0px auto;
+    }
+
+    #menu-toggle ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    li a {
+        border: none;
+        background-color: var(--white);
+        width: 125px;
+        padding: 10px 0;
+    }
 }
 
 /*-- LARGE SCREEN --*/
 @media screen and (min-width: 1024px) {
+    header {
+        grid-template-columns: 75px, 1fr, 1fr;
+        gap: 0;
+        grid-template-areas: 
+        'logo header menu'
+        'logo subtitle subtitle';
+        justify-content: start;
+    }
 
+    #logo {
+        max-width: 250px;
+    }
+
+    /* h1, header p {
+        justify-content: start;
+    } */
+
+    #menu-toggle ul {
+        gap: 10px;
+        justify-content: flex-end;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        margin: 0;
+    }
+
+    li a {
+        padding: 5px 0;
+    }
 }
