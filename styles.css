@@ -69,17 +69,32 @@ table {
     --font-montserrat: 'Montserrat', sans-serif;
 }
 
-/*-- FONTS --*/
-h1, h2, h3 {
+body {
+    line-height: 1.5rem;
+}
+
+/*-- FONTS AND TEXT --*/
+h1 {
+    font-size: 3rem;
     font-family: var(--font-molle);
 }
 
-h4, p, q, small, nav, button, form {
+h2, h3 {
+    font-size: 2rem;
+    font-family: var(--font-molle);
+}
+
+h4 {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+}
+
+p, q, small, nav, button, form {
     font-family: var(--font-montserrat);
 }
 
-/*-- HIDDEN ACCESSABLE SKIP TO MAIN --*/
-#skip {
+/*-- HIDDEN AND SR ACCESSABLE --*/
+#skip, .sr-only {
     position: absolute;
     top: auto;
     left: -10000px;
@@ -94,7 +109,90 @@ h4, p, q, small, nav, button, form {
     height: auto;
 }
 
-/*-- HEADINGS --*/
+/*-- HEADER --*/
+header {
+    background: linear-gradient(to bottom, var(--teal), var(--white));
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto, 1fr, auto;
+    grid-template-areas:
+        'logo . menu'
+        'header header header'
+        'subtitle subtitle .';
+}
+
+#logo {
+    grid-area: logo;
+}
+
+#logo img {
+    display: block;
+    width: 175px;
+    margin: 10px 0;
+}
+
+header h1 {
+    grid-area: header;
+    margin: 20px 30px 10px 30px;
+}
+
+header p {
+    grid-area: subtitle;
+    margin: 0 30px;
+}
+
+nav {
+    grid-area: menu;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 2;
+    width: 45vw;
+    height: 100%;
+    text-align: center;
+}
+
+nav label {
+    background-color: var(--yellow);
+    display: block;
+    padding: 20px 0;
+    font-weight: 700;
+}
+
+#toggle {
+    display: none;
+}
+
+nav ul{
+    display: none;
+}
+
+li a {
+    display:block;
+    background-color: var(--teal);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--black);
+    width: 100%;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 700;
+}
+
+li:hover a{
+    background-color: var(--yellow);
+}
+
+#toggle:checked + label + ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#toggle:checked + label {
+    background-color: var(--black);
+    color: var(--white);
+}
+
 
 /*-- IMAGES --*/
 
@@ -103,6 +201,8 @@ h4, p, q, small, nav, button, form {
 /*-- NAVIGATION --*/
 
 /*-- SMALL SCREEN --*/
+
+/*-- FOOTER --*/
 
 /*-- MEDIUM SCREEN --*/
 @media screen and (min-width: 550px) {
