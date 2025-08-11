@@ -56,7 +56,6 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*-- GLOBAL STYLES --*/
-
 :root {
     --yellow: #F6D64A;
     --teal: #55BCD5;
@@ -79,13 +78,29 @@ h4, p, q, small, nav, button, form {
     font-family: var(--font-montserrat);
 }
 
+/*-- HIDDEN ACCESSABLE SKIP TO MAIN --*/
+#skip {
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
 /*-- HEADINGS --*/
 
 /*-- IMAGES --*/
 
 /*-- MAIN/HEADER/FOOTER --*/
 
-/*-- CONTAINERS --*/
+/*-- NAVIGATION --*/
 
 /*-- SMALL SCREEN --*/
 
