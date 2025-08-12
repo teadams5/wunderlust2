@@ -429,6 +429,23 @@ form input, form select {
 
 /*-- FOOTER --*/
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 30px;
+    background-color: var(--light-gray);
+}
+
+footer a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--black);
+}
+
 /*-- MEDIUM SCREEN --*/
 @media screen and (min-width: 600px) {
     header {
@@ -502,6 +519,10 @@ form input, form select {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    footer {
+        flex-direction: row;
+    }
 }
 
 /*-- LARGE SCREEN --*/
@@ -553,5 +574,14 @@ form input, form select {
     form {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
+    }
+
+    footer {
+        gap: 50px;
+    }
+
+    footer p {
+        align-self: flex-start;
+        flex-grow: 3;
     }
 }
