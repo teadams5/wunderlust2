@@ -261,7 +261,7 @@ li:hover a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 100%;
     height: 100%;
 }
 
@@ -286,8 +286,40 @@ li:hover a{
 }
 
 /*-- ABOUT SECTION --*/
+#about {
+    background-color: var(--blue);
+    padding: 20px 30px;
+}
 
-/*-- SMALL SCREEN --*/
+#about div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    place-items: center;
+    margin: 0 auto;
+}
+
+#about section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+#about h4 {
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+#about img {
+    width: 150px;
+    height: 150px;
+}
+
+/*-- CONTACT US SECTION --*/
 
 /*-- FOOTER --*/
 
@@ -353,6 +385,10 @@ li:hover a{
 
     #plan div, #testimonials div {
         grid-template-columns: 1fr 1fr;
+    }
+
+    #about div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
