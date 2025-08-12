@@ -71,6 +71,7 @@ table {
 
 body {
     line-height: 1.5rem;
+    box-sizing: border-box;
 }
 
 /*-- FONTS AND TEXT --*/
@@ -320,6 +321,111 @@ li:hover a{
 }
 
 /*-- CONTACT US SECTION --*/
+#contact {
+    padding: 20px 30px;
+}
+
+#contact h3 {
+    padding: 10px;
+}
+
+.form-required {
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*-- FORM --*/
+form, form div {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form div>label, fieldset legend, #mySubmit {
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+#mySubmit {
+    background-color: var(--purple);
+    color: var(--white);
+    justify-self: end;
+    align-content: center;
+    text-align: center;
+    padding: 0;
+    margin-top: 10px;
+    width: 40%;
+    height: 35px;
+}
+
+.required {
+    color: var(--purple);
+    font-size: 1rem;
+    padding: 0 1px;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.radio-input {
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-control {
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--purple);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+input[type="radio"]:checked + .radio-control {
+    border-color: var(--purple);
+    background-color: var(--white);
+}
+
+input[type="radio"]:checked + .radio-control::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--purple);
+}
+
+form input, form select {
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    border: 3px solid var(--purple);
+}
 
 /*-- FOOTER --*/
 
@@ -390,6 +496,12 @@ li:hover a{
     #about div {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
 
 /*-- LARGE SCREEN --*/
@@ -436,5 +548,10 @@ li:hover a{
     #plan div, #testimonials div{
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
+    }
+
+    form {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
     }
 }
